@@ -1,19 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 import NoiseBackground from "@/components/NoiseBackground";
 import { Navbar } from "@/layouts/Navbar";
 import MainLayout from "@/layouts/MainLayout";
 import Footer from "@/layouts/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const outfit = Outfit({
+  weight: ["100", "200", "300", "400", "600", "700", "800", "900"],
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  style: ["normal"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -28,9 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-[#151312]`}
-      >
+      <body className={`${outfit.className} bg-[#151312]`}>
         <NoiseBackground className="relative z-10 container pt-6">
           <Navbar />
           <MainLayout>{children}</MainLayout>
