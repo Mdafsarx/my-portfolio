@@ -21,14 +21,14 @@ export const Navbar = () => {
   const [selectedLink, setSelectedLink] = useState("Home");
 
   return (
-    <header className="bg-[#6a6b6b66]  rounded-lg w-fit mx-auto px-4 h-12 flex items-center">
+    <header className="bg-[#6a6b6b66]  rounded-lg w-fit mx-auto px-4 h-12 flex items-center mb-20">
       <nav className="flex items-center gap-8">
         {navigation.map((item) => {
           const isSelected = item.name === selectedLink;
           return (
             <a
               key={item.name}
-              className={`relative ${
+              className={`relative cursor-pointer ${
                 isSelected ? "text-[#7043EC]" : "text-white"
               }`}
               onClick={() => setSelectedLink(item.name)}

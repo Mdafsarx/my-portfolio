@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NoiseBackground from "@/components/NoiseBackground";
-import { Navbar } from "@/layouts/navbar/Navbar";
+import { Navbar } from "@/layouts/Navbar";
+import MainLayout from "@/layouts/MainLayout";
+import Footer from "@/layouts/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,7 +33,8 @@ export default function RootLayout({
       >
         <NoiseBackground className="relative z-10 container pt-6">
           <Navbar />
-          {children}
+          <MainLayout>{children}</MainLayout>
+          <Footer />
         </NoiseBackground>
       </body>
     </html>
