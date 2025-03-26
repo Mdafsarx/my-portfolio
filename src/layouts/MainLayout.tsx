@@ -7,9 +7,9 @@ interface MainLayoutProps {
 
 const MainLayout: FC<MainLayoutProps> = ({ children }) => {
   return (
-    <main className="flex gap-20 mt-20">
-      <StickyCard />
-      {children}
+    <main className="flex gap-16 mt-20">
+      <StickyCard className="w-[35%] h-[650px]" />
+      <div className="w-[75%]">{children}</div>
     </main>
   );
 };

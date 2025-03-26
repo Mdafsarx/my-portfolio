@@ -3,10 +3,16 @@ import { BsDownload } from "react-icons/bs";
 import ShinyButton from "./ShinyButton";
 import { HiOutlineMail } from "react-icons/hi";
 import { FiPhone } from "react-icons/fi";
+import { cn } from "@/utils/cn";
 
-const StickyCard = () => {
+const StickyCard = ({ className }: { className: string }) => {
   return (
-    <div className="bg-gray-100 w-[350px] h-[650px] rounded-2xl p-7 flex flex-col items-center gap-5">
+    <div
+      className={cn(
+        "bg-gray-100 rounded-2xl p-7 flex flex-col items-center gap-5",
+        className
+      )}
+    >
       <Image
         src={data.image}
         alt=""
@@ -23,7 +29,7 @@ const StickyCard = () => {
               key={index}
               className="flex items-center gap-1 bg-gray-200 h-8 rounded-md text-white w-fit mx-auto"
             >
-              <span className="bg-primary-100 h-full px-1 rounded-l-md flex items-center">
+              <span className="bg-primary-100/80 h-full px-1 rounded-l-md flex items-center">
                 {item.icon}
               </span>
               <span className="pr-2 pl-0.5">{item.value}</span>
@@ -31,8 +37,9 @@ const StickyCard = () => {
           ))}
         </div>
       </div>
-      <ShinyButton className="flex items-center gap-2 font-semibold">
-        Resume <BsDownload />
+      <ShinyButton>
+        Resume
+        <BsDownload />
       </ShinyButton>
     </div>
   );

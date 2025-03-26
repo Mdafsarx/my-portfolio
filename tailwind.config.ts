@@ -15,13 +15,12 @@ module.exports = {
       screens: {
         lg: "720px",
         xl: "800px",
-        "2xl": "1200px",
+        "2xl": "1150px",
       },
     },
     extend: {
       colors: {
         primary: {
-          // 100: "#66FCF1",
           100: "#8E4BEB",
         },
         secondary: {
@@ -36,7 +35,7 @@ module.exports = {
         },
         black: "#000000",
         white: "#FFFFFF",
-        white2:'#908686'
+        white2:'#aa9e9e'
       },
     },
   },
