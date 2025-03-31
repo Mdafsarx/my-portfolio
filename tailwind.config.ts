@@ -22,9 +22,10 @@ module.exports = {
       colors: {
         primary: {
           100: "#8E4BEB",
+          200: "#A872FD",
         },
         secondary: {
-          100: "#80EEB4",
+          100: "#77e1a9",
          
         },
         gray: {

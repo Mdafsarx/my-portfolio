@@ -9,7 +9,7 @@ const StickyCard = ({ className }: { className: string }) => {
   return (
     <div
       className={cn(
-        "bg-gray-100 rounded-2xl p-7 flex flex-col items-center gap-5",
+        "bg-white/10 rounded-2xl p-7 flex flex-col items-center gap-5",
         className
       )}
     >

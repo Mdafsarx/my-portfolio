@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
-import NoiseBackground from "@/components/NoiseBackground";
 import { Navbar } from "@/layouts/Navbar";
 import MainLayout from "@/layouts/MainLayout";
-import Footer from "@/layouts/Footer";
+// import Footer from "@/layouts/Footer";
 
 const outfit = Outfit({
   weight: ["100", "200", "300", "400", "600", "700", "800", "900"],
@@ -25,12 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${outfit.className} bg-[#151312]`}>
-        <NoiseBackground className="relative z-10 container pt-6">
-          <Navbar />
-          <MainLayout>{children}</MainLayout>
-          <Footer />
-        </NoiseBackground>
+      <body className={`${outfit.className} bg-[#151312] pt-6 pb-14`}>
+        <Navbar />
+        <MainLayout>{children}</MainLayout>
       </body>
     </html>
   );

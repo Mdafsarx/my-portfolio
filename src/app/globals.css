@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .background-animation {
+   @apply bg-gradient-to-t from-primary-100/10 hover:from-primary-100/20 to-secondary-100/10 hover:to-secondary-100/20 rounded-lg
+  }
+  .text-gradient-top-right{
+    @apply bg-gradient-to-tr from-primary-100 to-secondary-100 text-transparent bg-clip-text
+  }
+  .text-gradient-top{
+    @apply bg-gradient-to-t from-primary-100 to-secondary-100 text-transparent bg-clip-text
+  }
+  .background-gradient{
+    @apply bg-gradient-to-tl from-primary-100/80 to-secondary-100/70
+  }
+}
